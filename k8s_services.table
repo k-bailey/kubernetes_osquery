@@ -1,0 +1,17 @@
+table_name("k8s_services")
+description("Kubrenetes services.")
+schema([
+    Column("name", TEXT, "Service name"),
+    Column("namespace", TEXT, "Service namespace"),
+    Column("creationTimestamp", TEXT, "Creation Timestamp"),
+    Column("clusterIP", TEXT, "Cluster IP"),
+    Column("ports", TEXT, "Ports"),
+    Column("resourceVersion", TEXT, "Resource Version"),
+    Column("selfLink", TEXT, "Self Link"),
+    Column("uid", TEXT, "UID"),
+])
+attributes(cacheable=True)
+implementation("applications/k8s@getServices")
+examples([
+  "select name from k8s_services;"
+])

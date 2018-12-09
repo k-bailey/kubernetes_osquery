@@ -1,0 +1,15 @@
+table_name("k8s_pods")
+description("Kubrenetes pods.")
+schema([
+    Column("name", TEXT, "Service name"),
+    Column("namespace", TEXT, "Service namespace"),
+    Column("hostIP", TEXT, "Host IP"),
+    Column("podIP", TEXT, "Pod IP"),
+    Column("startTime", TEXT, "Start Time"),
+    Column("phase", TEXT, "Phase"),
+])
+attributes(cacheable=True)
+implementation("applications/k8s@getPods")
+examples([
+  "select name from k8s_pods;"
+])
