@@ -6,4 +6,4 @@ This module is designed to be compiled in to osquery core. It leverages k8s unau
 
 Entry points have been written for /api/v1/services and /api/v1/pods
 
-Equivilent python thrift bindings are also in thei repo.
+Equivilent python thrift bindings are also in the repo.
